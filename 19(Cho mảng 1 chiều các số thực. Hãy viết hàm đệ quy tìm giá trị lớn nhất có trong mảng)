@@ -1,0 +1,19 @@
+#include<stdio.h>
+int giatriMax(int a[], int n)
+{
+    if(n == 0)
+    {
+        return 0;
+    }else{
+        int tim = giatriMax(a,n-1);
+        if(a[n-1]> tim)
+        {
+            return a[n-1];
+        }
+    }
+
+}
+int main(){
+    int a[5] = {1,2,4,7,6};
+    printf("%d",giatriMax(a,5));
+}
